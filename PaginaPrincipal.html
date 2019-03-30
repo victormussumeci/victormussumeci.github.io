@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VictorMussumeci</title>
+	<link rel="stylesheet" type="text/css" href="folhaDeStylos.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Playfair+Display" rel="stylesheet">
+	<meta charset="utf-8">
+</head>
+<script type="text/javascript">
+	var max=8;
+	var min=1;
+	var fotoInicial=1;
+
+	function IniciarSlide(){
+		carregar("s1.jpeg");
+	}
+	function prox(){
+		fotoInicial++
+		if(fotoInicial>max){
+			fotoInicial=min;
+		}
+		carregar("s"+fotoInicial+".jpeg");
+	}
+	function Anterior(){
+		fotoInicial--;
+		if(fotoInicial<min){
+			fotoInicial=max;
+		}
+		carregar("s"+fotoInicial+".jpeg");
+	}
+
+	function carregar(foto){
+		document.getElementById('preencher').style.backgroundImage="url("+foto+")";
+
+	}
+	function numero(){
+		alert("whatts:   (84) 99958-8402");
+	}
+	function mudarCor(obj,cor){
+		obj.style.backgroundColor=cor;
+	}
+	function mudarCorLetra(obj,cor){
+		obj.style.color=cor;
+	}
+</script>
+<body onload="IniciarSlide();">
+	
+
+	<div id="cabeçalho" >
+		<div class="elementosdeMenu">
+			<div class="SobreMim" onmouseover="mudarCor(this,'white');" onmouseout="mudarCor(this, '#1f2338')">
+				<a id="1termo" href="#SobreMim" onmouseover="mudarCorLetra(this,'black');" onmouseout="mudarCorLetra(this, 'white')">Sobre Mim</a>
+			</div>
+			<div class="Preferencias" onmouseover="mudarCor(this,'white');" onmouseout="mudarCor(this, '#1f2338')">
+				<a href="#Preferencias" onmouseover="mudarCorLetra(this,'black');" onmouseout="mudarCorLetra(this, 'white')">Preferências</a>
+			</div>
+
+			<div class="Contatos"onmouseover="mudarCor(this,'white');" onmouseout="mudarCor(this, '#1f2338')">
+				<a href="#Contatos" onmouseover="mudarCorLetra(this,'black');" onmouseout="mudarCorLetra(this, 'white')">Contatos</a>
+			</div>	
+		</div>	
+		
+	</div>	
+	<br>
+	<br>
+	<br>
+
+
+	<hr class="fixo">
+		<h2 id="SobreMim">Sobre Mim: </h2>
+	<div id="SobreM">
+		<div class="Texto">
+			
+			<p>Meu nome é Victor Mussumeci Chianca da Silva tenho 20 anos.
+Concluí meu ensino médio no ano de 2016, no Instituto Brasil. Atualmente estou cursando o Bacharelado em Ciências e Tecnologia ( BCT ), na Universidade Federal do Rio Grande do Norte (UFRN).
+Escolhi o BCT para que eu pudesse aprender mais sobre a área da computação. 
+</p>
+		</div>	
+		<div class="imagem" >
+			<img src="victor.jpeg">
+		</div>	
+	</div>	
+	<hr>
+	<h2> Preferências:</h2>
+	<div id="Preferencias">
+
+		<div id="fotos">
+
+			<div id="preencher">
+			</div>	
+			<div id="botoes">
+			<div class="passar">
+				<input class="bt_prox" type="button" value="<" onclick="Anterior();">
+			</div>
+			<div class="voltar">	
+				<input class="bt_ant" type="button" value=">" onclick="prox();">
+			</div>
+			</div>
+		</div>
+		<div class="texto2"> 
+			<p>Sobre o que eu gosto de fazer no meu tempo livre, gosto muito de praticar esportes, ficar juntos da minha familia, brincar e rir com os amigos, gosto bastante de programar,estou sempre disposto a aprender uma nova linguagem ou uma nova ferramenata que faça com que eu melhore minhas habilidades como desenvolvedor , ir para igreja, ler e estudar coisas ,que n necessariamente estão ligadas com a faculdade.Fora isso sou uma pessoa de poucos habitos. </p>
+		</div>
+	</div>
+	<hr>
+		<h2>Contatos:</h2>
+	
+	<div id="Contatos">
+		<div class="insta">
+			<a href="https://www.instagram.com/victormussumeci/"><img src="insta.png"></a>
+		</div>	
+		<div class="facebook">
+			<a href="https://www.facebook.com/victor.mussumeci"><img src="face.png"></a>
+		</div>
+		<div class="whatts">
+			<a href=""><img src="whatts.png" onmouseover="numero();"></a>
+		</div>
+
+	</div>		
+	<hr>
+
+	
+		<h3 class="logoEject"><a href="http://www.ejectufrn.com.br/?gclid=CjwKCAjwm-fkBRBBEiwA966fZPNUIUvhZU5cLaZKkAwCMLhK5jwLS0-IiXih8j8_R71D3a3R8mSwBBoCPXQQAvD_BwE">ProSEmpre &copy; 2019 </a></h3>
+		
+
+
+</body>
+</html>
